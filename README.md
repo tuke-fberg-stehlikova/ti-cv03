@@ -25,7 +25,8 @@ STRÁNKY
   Pred </body> pripoj bootstrap.bundle.min.js. Nechaj meta viewport.
 - Menu prerob na navbar (navbar-expand-md, fixed-top), rovnaký na oboch
   stránkach, s triedou active pri odkaze na aktuálnu stránku.
-- Obsah daj do container.
+- Hlavný obsah daj do <main class="container">; v nav a vo footer daj
+  <div class="container"> dovnútra. Obsah v main rozdeľ na <section> s id.
 - Na index.html použi mriežku (row, col-md-6, col-lg-4) a aspoň tri karty (card).
 - Pridaj tabuľku s triedami table a table-striped v obale table-responsive.
 - Obrázku daj triedu img-fluid.
@@ -138,7 +139,8 @@ PAGES
   Attach bootstrap.bundle.min.js before </body>. Keep the meta viewport.
 - Turn the menu into a navbar (navbar-expand-md, fixed-top), the same on both
   pages, with the active class on the link to the current page.
-- Put the content into a container.
+- Put the main content into <main class="container">; in nav and footer put
+  <div class="container"> inside. Divide the content in main into <section>s with ids.
 - On index.html use the grid (row, col-md-6, col-lg-4) and at least three
   cards (card).
 - Add a table with the classes table and table-striped inside a
