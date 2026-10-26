@@ -8,13 +8,17 @@ V repository *cv03* na GitHub a vo svojom webovom priestore na sigma (`ti/cv03`)
 
 - `index.html` a `form.html` prerobené na Bootstrap,
 - `css/style.css` len s tým, čo Bootstrap nerieši,
-- `img/` s obrázkom.
+- `img/` s obrázkom (image).
 
 ## Hodnotenie
 
-1 bod. Web z *cv02* je prerobený na Bootstrap a úlohy sú splnené. Commit a push najneskôr do nasledujúceho cvičenia. Po každom push sa spustia automatické testy; výsledok nájdeš podľa návodu [04 Odovzdávanie](https://beata.stehlikova.website.tuke.sk/navody/04-odovzdavanie.html), časť 6.
+1 bod. Web je na sigma, na mobile sa menu rozbalí a karty (cards) idú pod seba; každé field má `name`, každá možnosť `value`. Commit a push najneskôr do nasledujúceho cvičenia. Po každom push sa spustia automatické testy; výsledok nájdeš podľa návodu [04 Odovzdávanie](https://beata.stehlikova.website.tuke.sk/navody/04-odovzdavanie.html), časť 6.
 
-## Prompt pre AI
+## Prompty pre AI
+
+Na miestach `// DOPLŇ` a `[DOPLŇ …]` dopĺňaš sám.
+
+### Ukážka 6: prompt pre AI na prerobenie webu na Bootstrap
 
 ```text
 Prerob môj web na Bootstrap 5.3 (z CDN jsdelivr). Posielam ti svoje súbory
@@ -24,45 +28,45 @@ STRÁNKY
 - Do oboch stránok pripoj Bootstrap CSS a až za ním môj css/style.css.
   Pred </body> pripoj bootstrap.bundle.min.js. Nechaj meta viewport.
 - Menu prerob na navbar (navbar-expand-md, fixed-top), rovnaký na oboch
-  stránkach, s triedou active pri odkaze na aktuálnu stránku.
+  stránkach, s class active pri link na aktuálnu stránku.
 - Hlavný obsah daj do <main class="container">; v nav a vo footer daj
   <div class="container"> dovnútra. Obsah v main rozdeľ na <section> s id.
-- Na index.html použi mriežku (row, col-md-6, col-lg-4) a aspoň tri karty (card).
-- Pridaj tabuľku s triedami table a table-striped v obale table-responsive.
-- Obrázku daj triedu img-fluid.
+- Na index.html použi grid (row, col-md-6, col-lg-4) a aspoň tri karty (card).
+- Pridaj table s classes table a table-striped v obale table-responsive.
+- Image daj class img-fluid.
 
-FORMULÁR (form.html)
-Formulár neskôr spracuje PHP, preto ho oprav presne podľa týchto pravidiel:
+Form (form.html)
+Form neskôr spracuje PHP, preto ho oprav presne podľa týchto pravidiel:
 - <form method="get" action="">.
-- Každé pole má atribút name: malé písmená, bez diakritiky a bez medzier,
-  slová spojené podčiarkovníkom (napr. rok_od). Každé name je iné.
-  Ak moje pole name už má, nechaj ho.
-- Každé pole má id a vlastný <label for="..."> s tým istým id.
+- Každé field má attribute name: malé písmená, bez diakritiky a bez medzier,
+  slová spojené podčiarkovníkom (napr. since). Každé name je iné.
+  Ak moje field name už má, nechaj ho.
+- Každé field má id a vlastný <label for="..."> s tým istým id.
 - select: prvá možnosť je <option value="">-- vyber --</option>.
-  Každá ďalšia možnosť má atribút value s krátkou hodnotou bez diakritiky
-  a bez medzier; text medzi značkami je pre človeka.
+  Každá ďalšia možnosť má attribute value s krátkou hodnotou bez diakritiky
+  a bez medzier; text medzi tags je pre človeka.
 - radio: všetky v skupine majú rovnaké name, každé má vlastné value a
   vlastné id, jedno má checked. Skupina je vo <fieldset> s <legend>.
 - skupina checkboxov, z ktorých sa dá vybrať viac: name končí hranatými
-  zátvorkami (napr. zaujem[]), každý má vlastné value a id.
-- samostatný checkbox (súhlas): má value="ano".
-- Povinné polia majú required. Číselné pole má min a max.
-- Tlačidlo je <button type="submit">.
-- Triedy Bootstrap: form-label, form-control, form-select, form-check,
-  form-check-input, form-check-label, okolo každého poľa <div class="mb-3">,
-  na <legend> trieda fs-6.
+  zátvorkami (napr. interest[]), každý má vlastné value a id.
+- samostatný checkbox (súhlas): má value="yes".
+- Povinné fields majú required. Číselné field má min a max.
+- Button je <button type="submit">.
+- Class Bootstrap: form-label, form-control, form-select, form-check,
+  form-check-input, form-check-label, okolo každého field <div class="mb-3">,
+  na <legend> class fs-6.
 
 CSS
-V css/style.css nechaj len to, čo Bootstrap nerieši (moje farby, trieda
-.zvyraznene, :hover) a pridaj odsadenie body zhora kvôli fixed-top.
+V css/style.css nechaj len to, čo Bootstrap nerieši (moje farby, class
+.highlight, :hover) a pridaj odsadenie body zhora kvôli fixed-top.
 Ostatné zmaž a na začiatok súboru napíš v komentári, čo si zmazal a prečo.
-Žiadne inline štýly, žiadna značka <style>, žiadny vlastný JavaScript.
+Žiadne inline štýly, žiadna tag <style>, žiadny vlastný JavaScript.
 
 KOMENTÁRE
-Ku každému bloku HTML napíš krátky slovenský komentár, ktoré triedy
+Ku každému bloku HTML napíš krátky slovenský komentár, ktoré class
 Bootstrap používa a čo robia.
 
-Na konci vypíš tabuľku všetkých polí formulára: name, typ poľa a aké
+Na konci vypíš table všetkých fields form: name, typ field a aké
 hodnoty môže poslať.
 
 Tu sú moje súbory:
@@ -89,23 +93,23 @@ ls cv03
 
 Vo výpise musí byť `index.html`, `form.html`, `css`, `img` a `README.md`. Pokračuješ vo svojej téme z *cv02*. Priečinok `cv02` zostáva tak, ako si ho odovzdal.
 
-**Úloha 4.3: Bootstrap cez AI.** Prompt z Ukážky 6 vlož do AI a na koniec vlož obsah svojich troch súborov z `cv03`. Výsledok ulož do tých istých súborov v `cv03`. Stránky si pozri cez Five Server (pravý klik do súboru, **Open with Five Server**). **Prečítaj komentáre v kóde: každú triedu musíš vedieť prečítať.** Ak výsledok nie je dobrý, spusti znova príkaz `rsync` z úlohy 4.2 a začni od čistej kópie.
+**Úloha 4.3: Bootstrap cez AI.** Prompt z Ukážky 6 vlož do AI a na koniec vlož obsah svojich troch súborov z `cv03`. Výsledok ulož do tých istých súborov v `cv03`. Stránky si pozri cez Five Server (pravý klik do súboru, **Open with Five Server**). **Prečítaj komentáre v kóde: každú class musíš vedieť prečítať.** Ak výsledok nie je dobrý, spusti znova príkaz `rsync` z úlohy 4.2 a začni od čistej kópie.
 
-**Úloha 4.4: Mriežka.** Zmeň rozloženie kariet na notebooku z troch v riadku na dve. Pridaj jednu novú kartu.
+**Úloha 4.4: Grid.** Zmeň rozloženie cards na notebooku z troch v riadku na dve. Pridaj jednu novú card.
 
-**Úloha 4.5: Navbar.** Pridaj do menu jednu položku, napríklad odkaz na sekciu s `id` na stránke `index.html`. Over, že trieda `active` je na každej stránke pri správnom odkaze.
+**Úloha 4.5: Navbar.** Pridaj do menu jednu položku, napríklad link na section s `id` na stránke `index.html`. Over, že class `active` je na každej stránke pri správnom link.
 
-**Úloha 4.6: Formulár.** Skontroluj tabuľku polí, ktorú AI vypísala: každé pole má `name`, každá možnosť má `value`. Pridaj jedno nové pole s triedami Bootstrap, s `label`, `name` a `id`. Odošli formulár a v adresnom riadku nájdi hodnoty `value`.
+**Úloha 4.6: Form.** Skontroluj table fields, ktorú AI vypísala: každé field má `name`, každá možnosť má `value`. Pridaj jedno nové field s classes Bootstrap, s `label`, `name` a `id`. Odošli form a v adresnom riadku nájdi hodnoty `value`.
 
-**Úloha 4.7: Odstupy a farby.** Jednej časti stránky zmeň pozadie a odstupy iba triedami Bootstrap. Do `style.css` pri tejto úlohe nezasahuj.
+**Úloha 4.7: Odstupy a farby.** Jednej časti stránky zmeň pozadie a odstupy iba classes Bootstrap. Do `style.css` pri tejto úlohe nezasahuj.
 
 **Úloha 4.8: Vlastné CSS.** V `style.css` nastav menu svoju farbu. V F12 nájdi jedno prečiarknuté pravidlo a zisti, ktoré pravidlo ho prebilo.
 
-**Úloha 4.9: Mobil.** Cez F12 a ikonu mobilu skontroluj obe stránky: menu sa rozbalí, karty idú pod seba, obrázok a tabuľka nepretečú mimo stránku.
+**Úloha 4.9: Mobil.** Cez F12 a ikonu mobilu skontroluj obe stránky: menu sa rozbalí, card idú pod seba, image a table nepretečú mimo stránku.
 
 **Úloha 4.10: Commit a push.** Commit a push podľa návodu [04 Odovzdávanie](https://beata.stehlikova.website.tuke.sk/navody/04-odovzdavanie.html), časť 5. Urob commit po každej hotovej úlohe, nie jeden na konci. Výsledok automatických testov si pozri podľa časti 6. Pri červenom ✕ si prečítaj názov testu s `FAIL`, oprav to a pushni znova.
 
-**Úloha 4.11: Upload Folder a kontrola na sigma.** Podľa návodu 04, časť 7: klikni pravým na priečinok `cv03` a v menu úplne dole zvoľ **Upload Folder**. Over v prehliadači `https://sigma.tuke.sk/student/meno.priezvisko/ti/cv03/`: obe stránky aj obrázok.
+**Úloha 4.11: Upload Folder a kontrola na sigma.** Podľa návodu 04, časť 7: klikni pravým na priečinok `cv03` a v menu úplne dole zvoľ **Upload Folder**. Over v prehliadači `https://sigma.tuke.sk/student/meno.priezvisko/ti/cv03/`: obe stránky aj image.
 
 **Hodnotenie:** 1 bod. V repository *cv03* na GitHub aj na sigma je tvoj web z *cv02* prerobený na Bootstrap a úlohy sú splnené. Commit a push najneskôr do nasledujúceho cvičenia.
 
@@ -120,14 +124,18 @@ The week page with theory and examples: https://beata.stehlikova.website.tuke.sk
 In the repository *cv03* on GitHub and in your web space on sigma (`ti/cv03`):
 
 - `index.html` and `form.html` rebuilt with Bootstrap,
-- `css/style.css` with only what Bootstrap does not handle,
+- `css/style.css` only with what Bootstrap does not cover,
 - `img/` with the image.
 
 ## Grading
 
-1 point. The website from *cv02* is rebuilt with Bootstrap and the tasks are done. Commit and push by the next lab at the latest. Automatic tests run after every push; find the result following guide [04 Submitting](https://beata.stehlikova.website.tuke.sk/navody/04-odovzdavanie.html), part 6.
+1 point. The website is on sigma, on a phone the menu unfolds and the cards stack; every field has a `name`, every option a `value`. Commit and push by the next lab at the latest. Automatic tests run after every push; find the result following guide [04 Submitting](https://beata.stehlikova.website.tuke.sk/navody/04-odovzdavanie.html), part 6.
 
-## AI prompt
+## AI prompts
+
+You fill in the `// DOPLŇ` and `[FILL IN …]` places yourself.
+
+### Example 6: an AI prompt for rebuilding the website with Bootstrap
 
 ```text
 Rebuild my website with Bootstrap 5.3 (from the jsdelivr CDN). I am sending you
@@ -151,7 +159,7 @@ FORM (form.html)
 The form will later be processed by PHP, so fix it exactly by these rules:
 - <form method="get" action="">.
 - Every field has a name attribute: lowercase, no accents, no spaces, words
-  joined by an underscore (e.g. rok_od). Every name is different.
+  joined by an underscore (e.g. since). Every name is different.
   If my field already has a name, keep it.
 - Every field has an id and its own <label for="..."> with the same id.
 - select: the first option is <option value="">-- select --</option>.
@@ -160,8 +168,8 @@ The form will later be processed by PHP, so fix it exactly by these rules:
 - radio: all in a group share one name, each has its own value and its own id,
   one has checked. The group is in a <fieldset> with a <legend>.
 - a group of checkboxes where several can be ticked: the name ends with square
-  brackets (e.g. zaujem[]), each has its own value and id.
-- a single checkbox (agreement): has value="ano".
+  brackets (e.g. interest[]), each has its own value and id.
+- a single checkbox (agreement): has value="yes".
 - Required fields have required. A number field has min and max.
 - The button is <button type="submit">.
 - Bootstrap classes: form-label, form-control, form-select, form-check,
@@ -170,7 +178,7 @@ The form will later be processed by PHP, so fix it exactly by these rules:
 
 CSS
 Keep in css/style.css only what Bootstrap does not handle (my colours, the
-.zvyraznene class, :hover) and add top padding to body because of fixed-top.
+.highlight class, :hover) and add top padding to body because of fixed-top.
 Delete the rest and write a comment at the top of the file saying what you
 deleted and why. No inline styles, no <style> tag, no custom JavaScript.
 
